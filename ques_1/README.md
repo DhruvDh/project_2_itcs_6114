@@ -22,7 +22,7 @@ At the end, I substract 1 from the final anagram counts, since this algorithm co
 
 The exact implementation is as follows -
 
-Here words.keys() is a copy of the keys inside the tree.
+Here `words.keys()` is a copy of the keys inside the tree.
 
 ```
 for node in tree.iter_mut() {
