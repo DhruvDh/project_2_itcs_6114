@@ -2,7 +2,30 @@
 
 ## Introduction
 
-I've used a Red-Black tree to implement a balanced binary search tree. There are comments throughout the code to explain my implementation. Here I'll only focus on how I counted anagrams, since I don't think I need to explain how or why Red Black trees work.
+I've used a Red-Black tree to implement a balanced binary search tree. There are comments throughout the code to explain my implementation. Here I'll only focus on how I counted anagrams, and also my logic for checking whether it is a binary heap, since I don't think I need to explain how or why Red Black trees work.
+
+## Checking if Binary Search Tree produced is also a Max Binary Heap
+
+A balanced BST can be equivalent to a Max binary heap only if there are only 2 nodes in the tree, and if the parent is greater than the child node.
+
+In all other cases, the fact that the right child of a BST node is greater than it's own parent makes it impossible for it to be equivalent to a Max binary heap, which requires the parent to be larger than it's children.
+
+Considering this, the code for checking equivalence is as follows -
+
+```
+if nodes.len() == 2 {
+    if nodes[1] < nodes[0] {
+        println!("Yes, it is equivalent to a Max binary heap.");
+    } else {
+        println!(
+            "It is not a Max binary heap because {:?} is > than {:?}.",
+            nodes[1].0, nodes[0].0
+        );
+    }
+} else {
+    println!("No, it is not a Max binary heap.");
+}
+```
 
 ## Counting Anagrams
 
