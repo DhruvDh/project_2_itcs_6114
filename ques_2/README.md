@@ -1,5 +1,7 @@
 # ITCS 6114 - Project 2 - Question 1
 
+> Note - I tried providing executables for Mac too, but the program won't compile on Mac for some reason. As such, I hope the Windows binaries can be used instead. It runs perfectly fine on my machine
+
 ## Introduction
 
 We're required to compute legal moves for chess pieces after telling the computer where the piece was located. I did not like this way of interacting with the program, and instead chose to simulate a chess board with only one team playing, which requires the same computation of possible legal moves, but provides a much better way of interacting with the program.
@@ -130,3 +132,45 @@ The board is now as follows -
 R, K.. etc -> indicates initial of the piece placed there
 (I totally deserve extra credit for this.)
 ```
+
+## Implementation
+
+This was implemented by making structs for each chess piece - `Piece`, and a struct for an entire white or black set of pieces - `Pieces`.
+
+```
+struct Piece {
+    name: &'static str,
+    _type: &'static str,
+    position: (usize, usize),
+}
+```
+`name` stores the name of the piece, `R1`, `K2`, etc. `_type` stores the type of piece, `Pawn`, `Rook`, etc. while `position` stores the current position of the piece.
+
+A set of all the white or black pieces is stored in `Pieces`. Which is defined as follows -
+
+```
+pub struct Pieces {
+    R1: Box<Piece>,
+    K1: Box<Piece>,
+    B1: Box<Piece>,
+    R2: Box<Piece>,
+    K2: Box<Piece>,
+    B2: Box<Piece>,
+    Queen: Box<Piece>,
+    King: Box<Piece>,
+    P1: Box<Piece>,
+    P2: Box<Piece>,
+    P3: Box<Piece>,
+    P4: Box<Piece>,
+    P5: Box<Piece>,
+    P6: Box<Piece>,
+    P7: Box<Piece>,
+    P8: Box<Piece>,
+}
+```
+
+`Box` is a smart pointer type, and `Box<Piece>` implies that is a smart pointer that is pointing to an instance of type `Piece`.
+
+Method to find legal positions for each piece is implemented in `Piece::get_possible()`, while actually moving is implemented in `Pieces::_move()`.
+
+The implementation is pretty straight forward actually, just long.
