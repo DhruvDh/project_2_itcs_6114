@@ -109,8 +109,8 @@ impl Piece {
         }
 
         println!(
-            "\nCurrently your {} is at {}{}, as shown below.`",
-            self.name.chars().next().unwrap(),
+            "\nCurrently your {} is at {}{}, as shown below.",
+            self.name,
             self.position_name().0,
             self.position_name().1
         );

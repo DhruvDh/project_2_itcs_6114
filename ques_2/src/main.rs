@@ -20,7 +20,6 @@ fn main() {
     loop {
         let selection = which_piece();
         let name = String::from(names[selection as usize]);
-        println!("Calling move on {}", name);
         _Pieces._move(name);
     }
 }

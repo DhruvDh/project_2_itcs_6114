@@ -67,4 +67,66 @@ If there are no legal moves for a piece, the program will let you know by displa
 !=== There are no legal places for that piece to move. Try some other piece. ===!
 ```
 
-Once a piece is selected, and legal moves for it are found
+Once a piece is selected, and legal moves for it are found, just type the position option number (`1` for `1*`, `2` for `2*`, and so on) as shown on the board.
+
+```
+Currently your K2 is at 1g, as shown below.
+
+
+          - - - - - - - - - - - - - - - - - - - - -
+        8 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        7 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        6 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        5 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        4 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        3 |    |    |    |    |    |  2*|    |  1*|
+          - - - - - - - - - - - - - - - - - - - - -
+        2 | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 |
+          - - - - - - - - - - - - - - - - - - - - -
+        1 | R1 | K1 | B1 | 𝕂  | Ｑ  | B2 | K2 | R2 |
+          - - - - - - - - - - - - - - - - - - - - -
+            a    b    c    d    e    f    g    h
+
+         * -> indicates possition that can be moved into
+R, K.. etc -> indicates initial of the piece placed there
+(I totally deserve extra credit for this.)
+
+Where would you like to move it to?
+Enter the index of postion you like from the map above -
+2
+```
+
+And press enter to move the piece.
+
+```
+The board is now as follows -
+
+
+          - - - - - - - - - - - - - - - - - - - - -
+        8 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        7 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        6 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        5 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        4 |    |    |    |    |    |    |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        3 |    |    |    |    |    | K2 |    |    |
+          - - - - - - - - - - - - - - - - - - - - -
+        2 | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 |
+          - - - - - - - - - - - - - - - - - - - - -
+        1 | R1 | K1 | B1 | 𝕂  | Ｑ  | B2 |    | R2 |
+          - - - - - - - - - - - - - - - - - - - - -
+            a    b    c    d    e    f    g    h
+
+         * -> indicates possition that can be moved into
+R, K.. etc -> indicates initial of the piece placed there
+(I totally deserve extra credit for this.)
+```
