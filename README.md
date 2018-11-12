@@ -26,3 +26,5 @@ Run this command to execute the solution for question 2 -
 ```
 cd ques_2 && cargo run
 ```
+
+> Note - The program won't compile on Mac for some reason. As such, I have provided an executable built on Windows which works fine on my machine. I hope it can be used instead. If I can get it to compile on a Mac, I'll update the repository with a Mac executable too.
