@@ -1,4 +1,4 @@
-# ITCS 6114 - Project 2 - Question 1
+# ITCS 6114 - Project 2 - Question 2
 
 > Note - I tried providing executables for Mac too, but the program won't compile on Mac for some reason. As such, I hope the Windows binaries can be used instead. It runs perfectly fine on my machine
 
